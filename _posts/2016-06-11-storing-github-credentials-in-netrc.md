@@ -10,17 +10,17 @@ In order to avoid having to authenticate each time I want to push to github I de
 1. Create a personal access token in github
 2. Add the following in ~/.netrc
 
-```
-machine github.com
-login yourusername
-password <token>
-protocol https
+  ```
+  machine github.com
+  login yourusername
+  password <token>
+  protocol https
 
-machine gist.github.com
-login yourusername
-password <token>
-protocol https
-```
+  machine gist.github.com
+  login yourusername
+  password <token>
+  protocol https
+  ```
 
 3. Generate a gpg key
 
