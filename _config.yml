@@ -1,6 +1,6 @@
-name: Solar Theme
-url: http://example.org
-description: A stylish blog using the Solarized color palette
+name: viking66's blog
+url: http://viking66.github.io/
+description: A blog to document my tinkerings for future reference.
 
 permalink: /:year/:month/:day/:title/
 paginate: 10
