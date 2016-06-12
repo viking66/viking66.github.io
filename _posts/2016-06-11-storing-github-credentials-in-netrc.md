@@ -29,4 +29,4 @@ In order to avoid having to authenticate each time I want to push to github I de
     ```
 
   * Initially I got the following error: "gpg: agent_genkey failed: No pinentry". pinentry is just a symlink that points to one of the many pinentry binaries depending on the type you want to use. I'm running a headless server and the default pinentry expects a gui. To fix this I changed the pinentry symlink to point to pinentry-curses. I'm sure there's a better way to do this but the few options I came across didn't seem to work.
-4. blah blah blah
+4. why is this not working?
