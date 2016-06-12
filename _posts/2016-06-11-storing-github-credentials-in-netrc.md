@@ -5,7 +5,9 @@ date: 2016-06-11 23:27:49
 categories: git github netrc gpg
 ---
 
+```
 In order to avoid having to authenticate each time I want to push to github I decided to set up an encrypted netrc file. The steps were:
+```
 
 1. Create a personal access token in github
 2. Add the following in ~/.netrc
