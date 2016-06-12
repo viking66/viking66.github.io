@@ -6,4 +6,11 @@ permalink: /:year/:month/:day/:title/
 paginate: 10
 
 gems: [jekyll-paginate]
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+kxclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
