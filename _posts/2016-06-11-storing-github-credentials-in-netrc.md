@@ -44,5 +44,5 @@ In order to avoid having to authenticate each time I want to push to github I de
 7. Update git config to use the credential helper:
 
    ```
-   git config --global credential.helper "netrc -f ~/.netrc.gpg -v"
+   git config --global credential.helper "/home/viking66/netrc -f ~/.netrc.gpg -v"
    ```
