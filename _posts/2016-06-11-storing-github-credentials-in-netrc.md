@@ -9,6 +9,7 @@ In order to avoid having to authenticate each time I want to push to github I de
 
 1. Create a personal access token in github
 2. Add the following in ~/.netrc
+
     ```
     machine github.com
     login yourusername
@@ -21,6 +22,7 @@ In order to avoid having to authenticate each time I want to push to github I de
     protocol https
     ```
 3. Generate a gpg key
+
     ```
     gpg --gen-key
     ```
