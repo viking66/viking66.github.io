@@ -29,7 +29,7 @@ In order to avoid having to authenticate each time I want to push to github I de
    gpg -e -r email@example.com ~/.gitauth
    ```
 5. You should know have ~/.gitauth.gpg and can remove the original ~/.gitauth
-6. Get the credential helper:
+6. Set up the credential helper. Copy the following to ~/viking66/bin/git-credential-helper and make it executable:
 
    ```bash
    #!/usr/bin/env sh
