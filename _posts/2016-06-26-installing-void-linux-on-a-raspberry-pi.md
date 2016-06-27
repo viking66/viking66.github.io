@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Void Linux on a Raspberry Pi
-date: 2016-06-26 16:12:50
+date: 2016-06-26 17:55:00
 categories: void.linux linux raspberry.pi
 ---
 
