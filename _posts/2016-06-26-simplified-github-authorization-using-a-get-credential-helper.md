@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simplified GitHub Authorization Using a Git Credential Helper
-date: 2016-06-26 15:45:00
+date: 2016-06-26 17:50:00
 categories: git github netrc gpg git_credential_helper
 ---
 
@@ -18,16 +18,17 @@ In order to avoid having to authenticate each time I want to push to github I de
 
 3. Generate a gpg key
 
-   ```
+   ```bash
    gpg --gen-key
    ```
 
     * Initially I got the following error: "gpg: agent_genkey failed: No pinentry". pinentry is just a symlink that points to one of the many pinentry binaries depending on the type you want to use. I'm running a headless server and the default pinentry expects a gui. To fix this I changed the pinentry symlink to point to pinentry-curses. I'm sure there's a better way to do this but the few options I came across didn't seem to work.
-4. Encrypt netrc
+4. Encrypt your gitauth file
 
-   ```
+   ```bash
    gpg -e -r email@example.com ~/.gitauth
    ```
+
 5. You should know have ~/.gitauth.gpg and can remove the original ~/.gitauth
 6. Set up the credential helper. Copy the following to ~/viking66/bin/git-credential-helper and make it executable:
 
@@ -48,7 +49,15 @@ In order to avoid having to authenticate each time I want to push to github I de
 
 7. Update git config to use the credential helper:
 
-   ```
+   ```bash
    git config --global credential.helper "/home/viking66/bin/git-credential-helper ~/.gitauth.gpg"
    ```
+
+9. Add the following to your .bashrc otherwise the gpg decrypt will not prompt for password and will fail:
+
+   ```bash
+   GPG_TTY=$(tty)
+   export GPG_TTY
+   ```
+
 8. Now when you push to github, your credential helper should kick in and eliminate the need to provide your username and password.
